@@ -26,9 +26,9 @@ class TimeLineTableViewCell: UITableViewCell {
     }
     
     func setup(icon: UIImage, name: String, tweet: String) {
-        userIcon.image = icon
-        userName.text = name
-        content.text = tweet
+        self.userIcon.image = icon
+        self.userName.text = name
+        self.content.text = tweet
     }
     
 }

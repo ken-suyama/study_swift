@@ -13,7 +13,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let viewController2: UIViewController = UIViewController()
 //        viewController.inject(with: dependency)
 //        let tabBarController = UITabBarController()
-        let tabOneBarItem = UITabBarItem(title: "Tab 1", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let tabOneBarItem = UITabBarItem(title: "TL", image: UIImage(systemName: "house"), selectedImage: UIImage(named: "selectedImage.png"))
         
         viewController.tabBarItem = tabOneBarItem
         self.viewControllers = [viewController, viewController2]

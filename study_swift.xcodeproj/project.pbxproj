@@ -21,6 +21,12 @@
 		9FC9C61026DCA9320026ABA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC9C60E26DCA9320026ABA9 /* LaunchScreen.storyboard */; };
 		9FC9C61A26DCDC240026ABA9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC9C61926DCDC240026ABA9 /* TabBarController.swift */; };
 		9FC9C62026DDDEAB0026ABA9 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC9C61F26DDDEAB0026ABA9 /* TweetTableViewCell.swift */; };
+		9FFEB78226EAE6B400BC56AF /* Tweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB78126EAE6B400BC56AF /* Tweet.storyboard */; };
+		9FFEB78426EAE6C200BC56AF /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78326EAE6C200BC56AF /* TweetViewController.swift */; };
+		9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78726EB204000BC56AF /* TimeLineNavigationViewController.swift */; };
+		9FFEB78A26EB315400BC56AF /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */; };
+		9FFEB78D26EB484800BC56AF /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */; };
+		9FFEB78E26EB484800BC56AF /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		9FC9C61126DCA9320026ABA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FC9C61926DCDC240026ABA9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9FC9C61F26DDDEAB0026ABA9 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		9FFEB78126EAE6B400BC56AF /* Tweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tweet.storyboard; sourceTree = "<group>"; };
+		9FFEB78326EAE6C200BC56AF /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		9FFEB78726EB204000BC56AF /* TimeLineNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineNavigationViewController.swift; sourceTree = "<group>"; };
+		9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,12 @@
 				9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */,
 				9FA26F5526E74E11004628E0 /* TimeLine.storyboard */,
 				9FA26F5B26E89B54004628E0 /* TabBarDelegate.swift */,
+				9FFEB78126EAE6B400BC56AF /* Tweet.storyboard */,
+				9FFEB78326EAE6C200BC56AF /* TweetViewController.swift */,
+				9FFEB78726EB204000BC56AF /* TimeLineNavigationViewController.swift */,
+				9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */,
+				9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */,
+				9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */,
 			);
 			path = study_swift;
 			sourceTree = "<group>";
@@ -153,7 +171,9 @@
 				9FA26F5626E74E11004628E0 /* TimeLine.storyboard in Resources */,
 				9FC9C60D26DCA9320026ABA9 /* Assets.xcassets in Resources */,
 				9FC9C60826DCA9300026ABA9 /* Main.storyboard in Resources */,
+				9FFEB78226EAE6B400BC56AF /* Tweet.storyboard in Resources */,
 				9FA26F5226E746E0004628E0 /* TimeLineTableViewCell.xib in Resources */,
+				9FFEB78E26EB484800BC56AF /* CommentsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,13 +186,17 @@
 			files = (
 				9FA26F5126E746E0004628E0 /* TimeLineTableViewCell.swift in Sources */,
 				9FA26F5C26E89B54004628E0 /* TabBarDelegate.swift in Sources */,
+				9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */,
+				9FFEB78426EAE6C200BC56AF /* TweetViewController.swift in Sources */,
 				9FC9C60526DCA9300026ABA9 /* ViewController.swift in Sources */,
 				9FC9C60B26DCA9300026ABA9 /* study_swift.xcdatamodeld in Sources */,
 				9FC9C60126DCA9300026ABA9 /* AppDelegate.swift in Sources */,
+				9FFEB78A26EB315400BC56AF /* PlaceHolderTextView.swift in Sources */,
 				9FC9C60326DCA9300026ABA9 /* SceneDelegate.swift in Sources */,
 				9FC9C61A26DCDC240026ABA9 /* TabBarController.swift in Sources */,
 				9FC9C62026DDDEAB0026ABA9 /* TweetTableViewCell.swift in Sources */,
 				9FA26F5426E74DF1004628E0 /* TimeLineViewController.swift in Sources */,
+				9FFEB78D26EB484800BC56AF /* CommentsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Line View Controller-->
+        <!--View Controller-->
         <scene sceneID="djG-7X-lGR">
             <objects>
-                <viewController storyboardIdentifier="TimeLine" id="iOC-Tg-SDq" customClass="TimeLineViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iOC-Tg-SDq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jGQ-94-6u3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjR-nJ-OVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-152" y="-155"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="9a5-fQ-WS9">
+            <objects>
+                <tableViewController id="FhV-xc-6bu" customClass="TimeLineViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NWn-tx-Ski">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FhV-xc-6bu" id="3cG-MK-e1n"/>
+                            <outlet property="delegate" destination="FhV-xc-6bu" id="eAf-oT-arG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="UCa-fG-4pn"/>
+                    <connections>
+                        <outlet property="timeLine" destination="NWn-tx-Ski" id="pBP-Rg-NWA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOH-vh-gu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="-809"/>
+        </scene>
+        <!--Time Line Navigation View Controller-->
+        <scene sceneID="Rfg-XG-YHS">
+            <objects>
+                <navigationController storyboardIdentifier="TimeLine" id="nGa-c4-fp4" customClass="TimeLineNavigationViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C7Z-WL-Lqm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FhV-xc-6bu" kind="relationship" relationship="rootViewController" id="eHi-Ef-fhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbC-Io-S5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="-809"/>
         </scene>
     </scenes>
 </document>
