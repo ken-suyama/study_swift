@@ -59,7 +59,7 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.black.cgColor
-        cell?.layer.borderWidth = 1
+        cell?.layer.borderWidth = 0.5
         cell?.isSelected = false
     }
     

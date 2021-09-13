@@ -28,7 +28,7 @@
 		9FFEB78D26EB484800BC56AF /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */; };
 		9FFEB78E26EB484800BC56AF /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */; };
 		9FFEB79426EF2D5B00BC56AF /* PhotoLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */; };
-		9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */; };
+		9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationController.swift */; };
 		9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
 		9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoLibrary.storyboard; sourceTree = "<group>"; };
-		9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryNavigationControllerViewController.swift; sourceTree = "<group>"; };
+		9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryNavigationController.swift; sourceTree = "<group>"; };
 		9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +112,7 @@
 				9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */,
 				9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */,
 				9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */,
-				9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */,
+				9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationController.swift */,
 				9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */,
 			);
 			path = study_swift;
@@ -198,7 +198,7 @@
 				9FA26F5C26E89B54004628E0 /* TabBarDelegate.swift in Sources */,
 				9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */,
 				9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */,
-				9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift in Sources */,
+				9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationController.swift in Sources */,
 				9FFEB78426EAE6C200BC56AF /* TweetViewController.swift in Sources */,
 				9FC9C60526DCA9300026ABA9 /* ViewController.swift in Sources */,
 				9FC9C60B26DCA9300026ABA9 /* study_swift.xcdatamodeld in Sources */,

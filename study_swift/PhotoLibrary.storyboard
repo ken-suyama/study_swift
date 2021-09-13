@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photo Library Navigation Controller View Controller-->
+        <!--Photo Library Navigation Controller-->
         <scene sceneID="qlO-rj-Xq1">
             <objects>
-                <navigationController storyboardIdentifier="PhotoLibrary" id="rg2-Dn-IDX" customClass="PhotoLibraryNavigationControllerViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PhotoLibrary" id="rg2-Dn-IDX" customClass="PhotoLibraryNavigationController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XYG-2z-qfq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
