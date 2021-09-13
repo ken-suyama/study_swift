@@ -27,9 +27,6 @@
 		9FFEB78A26EB315400BC56AF /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */; };
 		9FFEB78D26EB484800BC56AF /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */; };
 		9FFEB78E26EB484800BC56AF /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */; };
-		9FFEB79426EF2D5B00BC56AF /* PhotoLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */; };
-		9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */; };
-		9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +52,6 @@
 		9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
-		9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoLibrary.storyboard; sourceTree = "<group>"; };
-		9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryNavigationControllerViewController.swift; sourceTree = "<group>"; };
-		9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +105,6 @@
 				9FFEB78926EB315400BC56AF /* PlaceHolderTextView.swift */,
 				9FFEB78B26EB484800BC56AF /* CommentsTableViewCell.swift */,
 				9FFEB78C26EB484800BC56AF /* CommentsTableViewCell.xib */,
-				9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */,
-				9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift */,
-				9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */,
 			);
 			path = study_swift;
 			sourceTree = "<group>";
@@ -181,7 +172,6 @@
 				9FC9C60D26DCA9320026ABA9 /* Assets.xcassets in Resources */,
 				9FC9C60826DCA9300026ABA9 /* Main.storyboard in Resources */,
 				9FFEB78226EAE6B400BC56AF /* Tweet.storyboard in Resources */,
-				9FFEB79426EF2D5B00BC56AF /* PhotoLibrary.storyboard in Resources */,
 				9FA26F5226E746E0004628E0 /* TimeLineTableViewCell.xib in Resources */,
 				9FFEB78E26EB484800BC56AF /* CommentsTableViewCell.xib in Resources */,
 			);
@@ -196,9 +186,7 @@
 			files = (
 				9FA26F5126E746E0004628E0 /* TimeLineTableViewCell.swift in Sources */,
 				9FA26F5C26E89B54004628E0 /* TabBarDelegate.swift in Sources */,
-				9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */,
 				9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */,
-				9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationControllerViewController.swift in Sources */,
 				9FFEB78426EAE6C200BC56AF /* TweetViewController.swift in Sources */,
 				9FC9C60526DCA9300026ABA9 /* ViewController.swift in Sources */,
 				9FC9C60B26DCA9300026ABA9 /* study_swift.xcdatamodeld in Sources */,
