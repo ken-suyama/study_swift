@@ -9,12 +9,8 @@
 import UIKit
 
 class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    struct Comment {
-        let commentedUserIcon: UIImage?
-        let commentedUserName: String
-        let content: String
-    }
+
+    private let viewModel = CommentViewModel()
 
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var posterName: UILabel!
@@ -24,20 +20,15 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var textBox: PlaceHolderTextView!
     @IBOutlet weak var commentStack: UIStackView!
     @IBOutlet weak var comments: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
     
-    var pPosterImage : UIImage?
-    var pPosterName : String = ""
-    var pTweet : String = ""
-    var pPostedAt : String = ""
-    var pUserIcon : UIImage?
-    
-    private let commentList: [Comment] = [
-        Comment(commentedUserIcon: #imageLiteral(resourceName: "icon1") , commentedUserName: "Angel", content: "初めてのコメント"),
-        Comment(commentedUserIcon: #imageLiteral(resourceName: "icon1") , commentedUserName: "Bob", content: ""),
-        Comment(commentedUserIcon: #imageLiteral(resourceName: "icon1") , commentedUserName: "Chirs", content: "Hello"),
-        Comment(commentedUserIcon: #imageLiteral(resourceName: "icon1") , commentedUserName: "David", content: "Good Evening"),
-        Comment(commentedUserIcon: #imageLiteral(resourceName: "icon1") , commentedUserName: "Elly", content: "ごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじの　ぶらこうじパイポパイポパイポのシューリンガンシューリンガンのグーリンダイグーリンダイのポンポコピーのポンポコナーのちょうきゅうめいのちょうすけ")
-    ]
+    var tweetId: Int = 1
+    var pPosterImage: UIImage?
+    var pPosterName: String = ""
+    var pTweet: String = ""
+    var pPostedAt: String = ""
+    var pUserIcon: UIImage?
+    var pComments: [Comment?] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +37,10 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         posterImage.image = pPosterImage
         posterName.text = pPosterName
         tweet.text = pTweet
-        postedAt.text = now()
+        postedAt.text = pPostedAt
         userIcon.image = pUserIcon
+        
+        sendButton.addTarget(self, action: #selector(self.tapButton(_:)), for: UIControl.Event.touchUpInside)
         
         textBox.placeHolder = "返信をツイート"
         commentStack.addBorder(width: 0.5, color: .black, position: .top)
@@ -57,38 +50,49 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         comments.register(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentsTableViewCell")
     }
     
-    static func makeInstance(posterImage: UIImage, posterName: String, tweet: String, postedAt: String, userIcon: UIImage) -> TweetViewController {
+    static func makeInstance(tweetId: Int, posterImage: UIImage, posterName: String, tweet: String, postedAt: String, userIcon: UIImage, comments: [Comment?]) -> TweetViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Tweet", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Tweet") as! TweetViewController
+        viewController.tweetId = tweetId
         viewController.pPosterImage = posterImage
         viewController.pPosterName = posterName
         viewController.pTweet = tweet
         viewController.pPostedAt = postedAt
         viewController.pUserIcon = userIcon
+        viewController.pComments = comments
         return viewController
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commentList.count
+        return pComments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CommentsTableViewCell = comments.dequeueReusableCell(withIdentifier: "CommentsTableViewCell", for: indexPath) as! CommentsTableViewCell
 
-        let comment = commentList[indexPath.row]
-        cell.setup(icon: comment.commentedUserIcon ?? #imageLiteral(resourceName: "icon1"), name: comment.commentedUserName, comment: comment.content, tweetedUserName: self.posterName.text ?? "")
+        let comment = pComments[indexPath.row]
+        let iconUrl: UIImage = UIImage(url: comment?.imageUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
+        cell.setup(icon: iconUrl, name: comment?.user.name ?? "", comment: comment?.content ?? "", tweetedUserName: pPosterName)
 
         return cell
     }
     
-    private func now() -> String {
-        let dt = Date()
-        let dateFormatter = DateFormatter()
-
-        // DateFormatter を使用して書式とロケールを指定する
-        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-
-        return dateFormatter.string(from: dt)
+    @objc func tapButton(_ sender: UIButton){
+        let comment: String = textBox.text ?? ""
+        if comment == "" {
+            return
+        }
+        print(comment)
+        viewModel.postComment(tweetId: tweetId, comment: comment)
+        let row: Int = pComments.count
+        self.pComments.insert(Comment.init(10, comment, nil, "", "", "", User.init("", "", "", "", "", nil, "", ""), 1), at: row)
+        self.comments.beginUpdates()
+        self.comments.insertRows(at: [IndexPath(row: row, section: 0)],
+                                  with: .automatic)
+        self.comments.endUpdates()
+        comments.scrollToRow(at: IndexPath(row: row, section: 0),
+                             at: UITableView.ScrollPosition.bottom, animated: true)
+        textBox.text = ""
     }
 }
 
@@ -97,12 +101,6 @@ enum BorderPosition {
 }
 
 extension UIView {
-
-    /// viewに枠線を表示する
-    /// - Parameters:
-    ///   - width: 太さ
-    ///   - color: 色
-    ///   - position: 場所
     func addBorder(width: CGFloat, color: UIColor, position: BorderPosition) {
         let border = CALayer()
 

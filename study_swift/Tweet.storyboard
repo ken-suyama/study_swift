@@ -64,7 +64,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2p-Q3-hAs" customClass="PlaceHolderTextView" customModule="study_swift" customModuleProvider="target">
-                                        <rect key="frame" x="35" y="0.0" width="347" height="30"/>
+                                        <rect key="frame" x="35" y="0.0" width="312" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
@@ -75,6 +75,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HN-fe-e8e">
+                                        <rect key="frame" x="352" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="JfO-hR-85C"/>
+                                        </constraints>
+                                        <state key="normal" image="paperplane" catalog="system"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcr-16-N0R">
@@ -135,6 +142,7 @@
                         <outlet property="postedAt" destination="rR3-wK-MzA" id="c4L-i5-z01"/>
                         <outlet property="posterImage" destination="Z1U-Ri-POF" id="J9K-db-LKh"/>
                         <outlet property="posterName" destination="Zyh-0y-txL" id="nCg-s1-GSB"/>
+                        <outlet property="sendButton" destination="8HN-fe-e8e" id="RpZ-8O-TOt"/>
                         <outlet property="textBox" destination="J2p-Q3-hAs" id="wRA-Ph-Trf"/>
                         <outlet property="tweet" destination="syg-du-4wL" id="cCX-0G-JVM"/>
                         <outlet property="userIcon" destination="8Uw-jj-HPh" id="J9l-Lb-mMi"/>
@@ -145,4 +153,7 @@
             <point key="canvasLocation" x="-8" y="20"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paperplane" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

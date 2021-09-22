@@ -10,8 +10,6 @@ import UIKit
 
 @IBDesignable class PlaceHolderTextView: UITextView {
 
-    // MARK: Stored Instance Properties
-
     @IBInspectable public var placeHolder: String = "" {
         willSet {
             self.placeHolderLabel.text = newValue
@@ -30,21 +28,15 @@ import UIKit
         return label
     }()
 
-    // MARK: Initializers
-
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
-    // MARK: View Life-Cycle Methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
         changeVisiblePlaceHolder()
         NotificationCenter.default.addObserver(self, selector: #selector(textChanged),name: UITextView.textDidChangeNotification, object: nil)
     }
-
-    // MARK: Other Private Methods
 
     private func changeVisiblePlaceHolder() {
         self.placeHolderLabel.alpha = (self.placeHolder.isEmpty || !self.text.isEmpty) ? 0.0 : 1.0

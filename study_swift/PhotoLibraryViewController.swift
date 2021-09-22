@@ -12,7 +12,6 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
 
     @IBOutlet weak var photoCollection: UICollectionView!
 
-    // サムネイル画像の名前
     let photos = [
         "icon1","icon1","icon1","icon1","icon1",
         "icon1","icon1","icon1","icon1","icon1",

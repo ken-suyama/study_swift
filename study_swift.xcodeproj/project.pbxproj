@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F5F2BBB26F9634600B28496 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BBA26F9634600B28496 /* User.swift */; };
+		9F5F2BBD26F9650800B28496 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BBC26F9650800B28496 /* Tweet.swift */; };
+		9F5F2BBF26F96CD400B28496 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BBE26F96CD400B28496 /* UserViewModel.swift */; };
+		9F5F2BC126F9AE1D00B28496 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */; };
+		9F5F2BC326F9B0C900B28496 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC226F9B0C900B28496 /* Comment.swift */; };
+		9F5F2BC526FAEB9600B28496 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */; };
 		9FA26F5126E746E0004628E0 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26F4F26E746E0004628E0 /* TimeLineTableViewCell.swift */; };
 		9FA26F5226E746E0004628E0 /* TimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA26F5026E746E0004628E0 /* TimeLineTableViewCell.xib */; };
 		9FA26F5426E74DF1004628E0 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */; };
@@ -33,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F5F2BBA26F9634600B28496 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9F5F2BBC26F9650800B28496 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		9F5F2BBE26F96CD400B28496 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		9F5F2BC226F9B0C900B28496 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		9FA26F4F26E746E0004628E0 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		9FA26F5026E746E0004628E0 /* TimeLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineTableViewCell.xib; sourceTree = "<group>"; };
 		9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +126,12 @@
 				9FFEB79326EF2D5B00BC56AF /* PhotoLibrary.storyboard */,
 				9FFEB79526EF46DB00BC56AF /* PhotoLibraryNavigationController.swift */,
 				9FFEB79726EF473F00BC56AF /* PhotoLibraryViewController.swift */,
+				9F5F2BBA26F9634600B28496 /* User.swift */,
+				9F5F2BBC26F9650800B28496 /* Tweet.swift */,
+				9F5F2BBE26F96CD400B28496 /* UserViewModel.swift */,
+				9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */,
+				9F5F2BC226F9B0C900B28496 /* Comment.swift */,
+				9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */,
 			);
 			path = study_swift;
 			sourceTree = "<group>";
@@ -199,12 +217,18 @@
 				9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */,
 				9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */,
 				9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationController.swift in Sources */,
+				9F5F2BBD26F9650800B28496 /* Tweet.swift in Sources */,
 				9FFEB78426EAE6C200BC56AF /* TweetViewController.swift in Sources */,
+				9F5F2BBF26F96CD400B28496 /* UserViewModel.swift in Sources */,
 				9FC9C60526DCA9300026ABA9 /* ViewController.swift in Sources */,
 				9FC9C60B26DCA9300026ABA9 /* study_swift.xcdatamodeld in Sources */,
+				9F5F2BBB26F9634600B28496 /* User.swift in Sources */,
 				9FC9C60126DCA9300026ABA9 /* AppDelegate.swift in Sources */,
+				9F5F2BC526FAEB9600B28496 /* CommentViewModel.swift in Sources */,
 				9FFEB78A26EB315400BC56AF /* PlaceHolderTextView.swift in Sources */,
+				9F5F2BC126F9AE1D00B28496 /* TweetViewModel.swift in Sources */,
 				9FC9C60326DCA9300026ABA9 /* SceneDelegate.swift in Sources */,
+				9F5F2BC326F9B0C900B28496 /* Comment.swift in Sources */,
 				9FC9C61A26DCDC240026ABA9 /* TabBarController.swift in Sources */,
 				9FC9C62026DDDEAB0026ABA9 /* TweetTableViewCell.swift in Sources */,
 				9FA26F5426E74DF1004628E0 /* TimeLineViewController.swift in Sources */,
