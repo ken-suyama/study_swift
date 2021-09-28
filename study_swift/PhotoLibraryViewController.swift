@@ -10,16 +10,21 @@ import UIKit
 
 class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    private let viewModel = TweetViewModel()
+    private var tweets: [Tweet] = []
+
     @IBOutlet weak var photoCollection: UICollectionView!
 
-    let photos = [
-        "icon1","icon1","icon1","icon1","icon1",
-        "icon1","icon1","icon1","icon1","icon1",
-        "icon1","icon1","icon1","icon1","icon1",
-    ]
+//    let photos = [
+//        "icon1","icon1","icon1","icon1","icon1",
+//        "icon1","icon1","icon1","icon1","icon1",
+//        "icon1","icon1","icon1","icon1","icon1",
+//    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tweets = self.viewModel.fetchMyPhotoTweets()
         
         photoCollection.delegate = self
         photoCollection.dataSource = self
@@ -35,7 +40,8 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
         imageCell.layer.borderWidth = 0.5
 
         let imageView = imageCell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage = UIImage(named: photos[indexPath.row])
+        let tweet = self.tweets[indexPath.row]
+        let cellImage = UIImage(url: tweet.imageUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
         imageView.image = cellImage
         
         return imageCell
@@ -46,7 +52,7 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count;
+        return tweets.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

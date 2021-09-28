@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Tweet View Controller-->
+        <scene sceneID="Exw-lB-wX4">
+            <objects>
+                <viewController storyboardIdentifier="PostTweet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a2l-eF-fOr" customClass="PostTweetViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2p7-s3-rEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yte-AV-vJc">
+                                <rect key="frame" x="10" y="49" width="394" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZi-NF-Yb8">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="30"/>
+                                        <state key="normal" title="キャンセル"/>
+                                        <connections>
+                                            <action selector="onClickCancelButton:" destination="a2l-eF-fOr" eventType="touchUpInside" id="GmX-gJ-4L4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAd-YT-jK0">
+                                        <rect key="frame" x="98.5" y="0.0" width="98.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-hQ-Fc5">
+                                        <rect key="frame" x="197" y="0.0" width="98.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHf-AU-jOk">
+                                        <rect key="frame" x="295.5" y="0.0" width="98.5" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="ツイートする">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickTweetButton:" destination="a2l-eF-fOr" eventType="touchUpInside" id="PPv-Ux-lvi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gy4-yj-AVH"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="いまどうしてる？" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OxB-nl-Mmi">
+                                <rect key="frame" x="65" y="99" width="339" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3cL-Aa-TW6">
+                                <rect key="frame" x="10" y="99" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CuW-34-OL0"/>
+                                    <constraint firstAttribute="height" constant="50" id="ce1-vT-bZ2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyz-Lk-Lbc">
+                                <rect key="frame" x="344" y="782" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="DbB-JL-WBj"/>
+                                    <constraint firstAttribute="height" constant="50" id="oWh-Vk-2kw"/>
+                                </constraints>
+                                <state key="normal" image="photo.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onClickPhotoButton:" destination="a2l-eF-fOr" eventType="touchUpInside" id="RzQ-Ux-m6O"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ybB-xO-Oat">
+                                <rect key="frame" x="20" y="632" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOz-uu-EGq">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HCC-0n-scK"/>
+                                    <constraint firstAttribute="width" constant="100" id="cQX-Mu-EdS"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-u4-HD1">
+                                <rect key="frame" x="123" y="622.5" width="20" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0V1-zy-Vw7"/>
+                                    <constraint firstAttribute="height" constant="20" id="b3X-5q-M0N"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="xmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="onClickEraseImageButton:" destination="a2l-eF-fOr" eventType="touchUpInside" id="82j-xT-5Nz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OxB-nl-Mmi" firstAttribute="leading" secondItem="3cL-Aa-TW6" secondAttribute="trailing" constant="5" id="4Nf-Ue-0tc"/>
+                            <constraint firstItem="3cL-Aa-TW6" firstAttribute="leading" secondItem="6Sj-bu-rwN" secondAttribute="leading" constant="10" id="4WE-TT-7p2"/>
+                            <constraint firstItem="ybB-xO-Oat" firstAttribute="leading" secondItem="6Sj-bu-rwN" secondAttribute="leading" constant="20" id="9Sx-q1-uHp"/>
+                            <constraint firstItem="5eZ-u4-HD1" firstAttribute="leading" secondItem="WOz-uu-EGq" secondAttribute="trailing" constant="3" id="9sG-HA-2jD"/>
+                            <constraint firstItem="6Sj-bu-rwN" firstAttribute="trailing" secondItem="yte-AV-vJc" secondAttribute="trailing" constant="10" id="BgO-aw-CIz"/>
+                            <constraint firstItem="3cL-Aa-TW6" firstAttribute="top" secondItem="yte-AV-vJc" secondAttribute="bottom" constant="20" id="C4r-2d-zEf"/>
+                            <constraint firstItem="oyz-Lk-Lbc" firstAttribute="top" secondItem="ybB-xO-Oat" secondAttribute="bottom" constant="50" id="F2f-XI-vdw"/>
+                            <constraint firstItem="WOz-uu-EGq" firstAttribute="top" secondItem="5eZ-u4-HD1" secondAttribute="bottom" constant="-10" id="GMf-E5-w0P"/>
+                            <constraint firstItem="6Sj-bu-rwN" firstAttribute="trailing" secondItem="oyz-Lk-Lbc" secondAttribute="trailing" constant="20" id="HBa-6O-N9R"/>
+                            <constraint firstItem="6Sj-bu-rwN" firstAttribute="trailing" secondItem="OxB-nl-Mmi" secondAttribute="trailing" constant="10" id="LYT-Ni-6TX"/>
+                            <constraint firstItem="yte-AV-vJc" firstAttribute="top" secondItem="6Sj-bu-rwN" secondAttribute="top" constant="5" id="W3X-Y2-DRL"/>
+                            <constraint firstItem="6Sj-bu-rwN" firstAttribute="bottom" secondItem="oyz-Lk-Lbc" secondAttribute="bottom" constant="30" id="nbs-uK-ZwN"/>
+                            <constraint firstItem="yte-AV-vJc" firstAttribute="leading" secondItem="6Sj-bu-rwN" secondAttribute="leading" constant="10" id="rQa-jl-UAG"/>
+                            <constraint firstItem="OxB-nl-Mmi" firstAttribute="top" secondItem="3cL-Aa-TW6" secondAttribute="top" id="zEa-9G-cXZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Sj-bu-rwN"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="gZi-NF-Yb8" id="8co-eT-hHk"/>
+                        <outlet property="eraseImageButton" destination="5eZ-u4-HD1" id="hub-hk-GVo"/>
+                        <outlet property="photoButton" destination="oyz-Lk-Lbc" id="49Z-oY-F5a"/>
+                        <outlet property="postButton" destination="eHf-AU-jOk" id="azT-Q7-HDw"/>
+                        <outlet property="selectedImageView" destination="WOz-uu-EGq" id="iix-OI-b2c"/>
+                        <outlet property="tweetTextField" destination="OxB-nl-Mmi" id="I5T-wX-LK2"/>
+                        <outlet property="userIcon" destination="3cL-Aa-TW6" id="YJv-Th-g5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vi0-1s-mCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

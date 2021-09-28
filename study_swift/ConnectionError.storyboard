@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connection Error View Controller-->
+        <scene sceneID="24H-xq-OeK">
+            <objects>
+                <viewController storyboardIdentifier="ConnectionError" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M1h-ST-dUI" customClass="ConnectionErrorViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sT0-Sc-e2K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53t-GV-lYA">
+                                <rect key="frame" x="10" y="417.5" width="394" height="61"/>
+                                <string key="text" base64-UTF8="YES">
+6YCa5L+h44Gr5aSx5pWX44GX44G+44GX44Gf44CCERHigKjjgZToh6rouqvjga7jg4fjg5DjgqTjgrnj
+ga7pgJrkv6Hnirbms4HjgpLnorroqo3jgZfjgaYN44Ki44OX44Oq44KS5YaN6LW35YuV44GX44Gm44GP
+44Gg44GV44GE44CCA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Slz-ov-rrV" firstAttribute="leading" secondItem="53t-GV-lYA" secondAttribute="leading" constant="-10" id="Rks-l9-t5I"/>
+                            <constraint firstItem="53t-GV-lYA" firstAttribute="centerY" secondItem="sT0-Sc-e2K" secondAttribute="centerY" id="YYN-qP-MBL"/>
+                            <constraint firstItem="53t-GV-lYA" firstAttribute="centerX" secondItem="sT0-Sc-e2K" secondAttribute="centerX" id="a2v-XE-Laz"/>
+                            <constraint firstItem="53t-GV-lYA" firstAttribute="trailing" secondItem="Slz-ov-rrV" secondAttribute="trailing" constant="-10" id="eIF-U5-Bzl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Slz-ov-rrV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TR3-Fr-5fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="80"/>
+        </scene>
+    </scenes>
+</document>

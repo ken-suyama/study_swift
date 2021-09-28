@@ -21,6 +21,7 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var commentStack: UIStackView!
     @IBOutlet weak var comments: UITableView!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var tweetImage: UIImageView!
     
     var tweetId: Int = 1
     var pPosterImage: UIImage?
@@ -29,6 +30,7 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var pPostedAt: String = ""
     var pUserIcon: UIImage?
     var pComments: [Comment?] = []
+    var pTweetImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,10 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tweet.text = pTweet
         postedAt.text = pPostedAt
         userIcon.image = pUserIcon
+        tweetImage.image = pTweetImage
+        if pTweetImage == nil {
+            tweetImage.isHidden = true
+        }
         
         sendButton.addTarget(self, action: #selector(self.tapButton(_:)), for: UIControl.Event.touchUpInside)
         
@@ -50,9 +56,11 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         comments.register(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentsTableViewCell")
     }
     
-    static func makeInstance(tweetId: Int, posterImage: UIImage, posterName: String, tweet: String, postedAt: String, userIcon: UIImage, comments: [Comment?]) -> TweetViewController {
+    static func makeInstance(tweetId: Int, posterImage: UIImage, posterName: String, tweet: String, tweetImage: UIImage?, postedAt: String, comments: [Comment?]) -> TweetViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Tweet", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Tweet") as! TweetViewController
+        let loggedInUserIconUrl = UserDefaults.standard.string(forKey: "userIconUrl")!
+        let userIcon: UIImage = UIImage(url: loggedInUserIconUrl != "" ? loggedInUserIconUrl : "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
         viewController.tweetId = tweetId
         viewController.pPosterImage = posterImage
         viewController.pPosterName = posterName
@@ -60,6 +68,7 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         viewController.pPostedAt = postedAt
         viewController.pUserIcon = userIcon
         viewController.pComments = comments
+        viewController.pTweetImage = tweetImage
         return viewController
     }
     
@@ -71,7 +80,7 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell: CommentsTableViewCell = comments.dequeueReusableCell(withIdentifier: "CommentsTableViewCell", for: indexPath) as! CommentsTableViewCell
 
         let comment = pComments[indexPath.row]
-        let iconUrl: UIImage = UIImage(url: comment?.imageUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
+        let iconUrl: UIImage = UIImage(url: comment?.user.iconUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
         cell.setup(icon: iconUrl, name: comment?.user.name ?? "", comment: comment?.content ?? "", tweetedUserName: pPosterName)
 
         return cell
@@ -85,7 +94,11 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print(comment)
         viewModel.postComment(tweetId: tweetId, comment: comment)
         let row: Int = pComments.count
-        self.pComments.insert(Comment.init(10, comment, nil, "", "", "", User.init("", "", "", "", "", nil, "", ""), 1), at: row)
+        let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+        let userName = UserDefaults.standard.string(forKey: "userName") ?? ""
+        let userIconUrl = UserDefaults.standard.string(forKey: "userIconUrl")
+        let userEmail = UserDefaults.standard.string(forKey: "userEmail") ?? ""
+        self.pComments.insert(Comment.init(10, comment, nil, "", "", userId, User.init(userId, userEmail, "", userName, "", userIconUrl, "", ""), 1), at: row)
         self.comments.beginUpdates()
         self.comments.insertRows(at: [IndexPath(row: row, section: 0)],
                                   with: .automatic)

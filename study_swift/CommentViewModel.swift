@@ -14,7 +14,7 @@ class CommentViewModel {
         print(comment)
         let targetUrl = URL(string: "http://localhost:3000/tweets/"+String(tweetId)+"/comments")!
         var request = URLRequest(url: targetUrl)
-        let token: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YmJsIiwiZW1haWwiOiJlbWFpbDJAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzIyODYyNjUsImV4cCI6MTYzMjI5ODI2NX0.dwY-Y-80d7TGvZAOlzk21AlAm1jGCJyhO-mwLT1YVOo"
+        guard let token: String = UserDefaults.standard.string(forKey: "accessToken") else { return }
         request.httpMethod = "POST"
         request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -31,7 +31,7 @@ class CommentViewModel {
                return
            }
            
-           guard let data = data,
+           guard let _ = data,
                  let response = response as? HTTPURLResponse else {
                print("データもしくはレスポンスがnilの状態です")
                return

@@ -3,15 +3,65 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home-->
+        <scene sceneID="AZp-OX-Mq2">
+            <objects>
+                <viewController id="x5u-XJ-XGE" customClass="TimeLineContanerViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YWj-P0-pvw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG4-p5-eQ3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="FhV-xc-6bu" kind="embed" id="swX-Zx-oiq"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-Sp-Qsp">
+                                <rect key="frame" x="354" y="802" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="jpU-wK-VPs"/>
+                                    <constraint firstAttribute="height" constant="40" id="xEl-3v-EN7"/>
+                                </constraints>
+                                <state key="normal" image="pencil.tip.crop.circle.badge.plus" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickTweetButton:" destination="x5u-XJ-XGE" eventType="touchUpInside" id="maE-Me-2Wl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XQc-u0-bxw" firstAttribute="trailing" secondItem="MG4-p5-eQ3" secondAttribute="trailing" id="1H1-Cl-MeA"/>
+                            <constraint firstItem="hyh-Sp-Qsp" firstAttribute="trailing" secondItem="MG4-p5-eQ3" secondAttribute="trailing" constant="-20" id="81K-a9-neP"/>
+                            <constraint firstItem="XQc-u0-bxw" firstAttribute="bottom" secondItem="MG4-p5-eQ3" secondAttribute="bottom" id="cep-Vy-f8q"/>
+                            <constraint firstItem="MG4-p5-eQ3" firstAttribute="leading" secondItem="XQc-u0-bxw" secondAttribute="leading" id="ugV-6T-ZgK"/>
+                            <constraint firstItem="MG4-p5-eQ3" firstAttribute="top" secondItem="XQc-u0-bxw" secondAttribute="top" id="uzp-Iq-7tq"/>
+                            <constraint firstItem="hyh-Sp-Qsp" firstAttribute="bottom" secondItem="MG4-p5-eQ3" secondAttribute="bottom" constant="-20" id="x35-OF-Fjh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XQc-u0-bxw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="Asa-EV-YEw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxV-0h-qGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="-810.26785714285711"/>
+        </scene>
         <!--Home-->
         <scene sceneID="9a5-fQ-WS9">
             <objects>
                 <tableViewController id="FhV-xc-6bu" customClass="TimeLineViewController" customModule="study_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NWn-tx-Ski">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <connections>
@@ -19,14 +69,14 @@
                             <outlet property="delegate" destination="FhV-xc-6bu" id="eAf-oT-arG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="UCa-fG-4pn"/>
+                    <navigationItem key="navigationItem" title="Home" id="Jda-kh-SsW"/>
                     <connections>
                         <outlet property="timeLine" destination="NWn-tx-Ski" id="pBP-Rg-NWA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOH-vh-gu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="-809"/>
+            <point key="canvasLocation" x="835" y="-810"/>
         </scene>
         <!--Time Line Navigation View Controller-->
         <scene sceneID="Rfg-XG-YHS">
@@ -37,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FhV-xc-6bu" kind="relationship" relationship="rootViewController" id="eHi-Ef-fhm"/>
+                        <segue destination="x5u-XJ-XGE" kind="relationship" relationship="rootViewController" id="Qfq-6F-l0A"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbC-Io-S5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,4 +95,7 @@
             <point key="canvasLocation" x="-612" y="-809"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
+    </resources>
 </document>

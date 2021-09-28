@@ -13,6 +13,18 @@
 		9F5F2BC126F9AE1D00B28496 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */; };
 		9F5F2BC326F9B0C900B28496 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC226F9B0C900B28496 /* Comment.swift */; };
 		9F5F2BC526FAEB9600B28496 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */; };
+		9F5F2BC726FC568300B28496 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC626FC568300B28496 /* SignUp.storyboard */; };
+		9F5F2BC926FC687800B28496 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BC826FC687800B28496 /* SignUpViewController.swift */; };
+		9F5F2BCB26FC777500B28496 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BCA26FC777500B28496 /* UIColorExtention.swift */; };
+		9F5F2BCD26FD7A9900B28496 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BCC26FD7A9900B28496 /* LogInViewModel.swift */; };
+		9F5F2BCF26FDAEEF00B28496 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5F2BCE26FDAEEF00B28496 /* LogIn.storyboard */; };
+		9F5F2BD126FDB6D500B28496 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BD026FDB6D500B28496 /* LogInViewController.swift */; };
+		9F5F2BD526FDD0E000B28496 /* TimeLineContanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BD426FDD0E000B28496 /* TimeLineContanerViewController.swift */; };
+		9F5F2BD726FDD18900B28496 /* PostTweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5F2BD626FDD18900B28496 /* PostTweet.storyboard */; };
+		9F5F2BD926FDD7AC00B28496 /* PostTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BD826FDD7AC00B28496 /* PostTweetViewController.swift */; };
+		9F5F2BDF2701581100B28496 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BDE2701581100B28496 /* ImageUploader.swift */; };
+		9F5F2BE127016B1800B28496 /* ConnectionError.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5F2BE027016B1800B28496 /* ConnectionError.storyboard */; };
+		9F5F2BE327016DA000B28496 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F2BE227016DA000B28496 /* ConnectionErrorViewController.swift */; };
 		9FA26F5126E746E0004628E0 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26F4F26E746E0004628E0 /* TimeLineTableViewCell.swift */; };
 		9FA26F5226E746E0004628E0 /* TimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA26F5026E746E0004628E0 /* TimeLineTableViewCell.xib */; };
 		9FA26F5426E74DF1004628E0 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */; };
@@ -45,6 +57,18 @@
 		9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		9F5F2BC226F9B0C900B28496 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		9F5F2BC626FC568300B28496 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		9F5F2BC826FC687800B28496 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9F5F2BCA26FC777500B28496 /* UIColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
+		9F5F2BCC26FD7A9900B28496 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		9F5F2BCE26FDAEEF00B28496 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		9F5F2BD026FDB6D500B28496 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9F5F2BD426FDD0E000B28496 /* TimeLineContanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineContanerViewController.swift; sourceTree = "<group>"; };
+		9F5F2BD626FDD18900B28496 /* PostTweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostTweet.storyboard; sourceTree = "<group>"; };
+		9F5F2BD826FDD7AC00B28496 /* PostTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTweetViewController.swift; sourceTree = "<group>"; };
+		9F5F2BDE2701581100B28496 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		9F5F2BE027016B1800B28496 /* ConnectionError.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectionError.storyboard; sourceTree = "<group>"; };
+		9F5F2BE227016DA000B28496 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
 		9FA26F4F26E746E0004628E0 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		9FA26F5026E746E0004628E0 /* TimeLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineTableViewCell.xib; sourceTree = "<group>"; };
 		9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +130,12 @@
 				9FC9C60226DCA9300026ABA9 /* SceneDelegate.swift */,
 				9FC9C60426DCA9300026ABA9 /* ViewController.swift */,
 				9FC9C61F26DDDEAB0026ABA9 /* TweetTableViewCell.swift */,
+				9FC9C61926DCDC240026ABA9 /* TabBarController.swift */,
 				9FC9C60626DCA9300026ABA9 /* Main.storyboard */,
 				9FC9C60C26DCA9320026ABA9 /* Assets.xcassets */,
 				9FC9C60E26DCA9320026ABA9 /* LaunchScreen.storyboard */,
 				9FC9C61126DCA9320026ABA9 /* Info.plist */,
 				9FC9C60926DCA9300026ABA9 /* study_swift.xcdatamodeld */,
-				9FC9C61926DCDC240026ABA9 /* TabBarController.swift */,
 				9FA26F4F26E746E0004628E0 /* TimeLineTableViewCell.swift */,
 				9FA26F5026E746E0004628E0 /* TimeLineTableViewCell.xib */,
 				9FA26F5326E74DF1004628E0 /* TimeLineViewController.swift */,
@@ -132,6 +156,18 @@
 				9F5F2BC026F9AE1D00B28496 /* TweetViewModel.swift */,
 				9F5F2BC226F9B0C900B28496 /* Comment.swift */,
 				9F5F2BC426FAEB9600B28496 /* CommentViewModel.swift */,
+				9F5F2BC626FC568300B28496 /* SignUp.storyboard */,
+				9F5F2BC826FC687800B28496 /* SignUpViewController.swift */,
+				9F5F2BCA26FC777500B28496 /* UIColorExtention.swift */,
+				9F5F2BCC26FD7A9900B28496 /* LogInViewModel.swift */,
+				9F5F2BCE26FDAEEF00B28496 /* LogIn.storyboard */,
+				9F5F2BD026FDB6D500B28496 /* LogInViewController.swift */,
+				9F5F2BD426FDD0E000B28496 /* TimeLineContanerViewController.swift */,
+				9F5F2BD626FDD18900B28496 /* PostTweet.storyboard */,
+				9F5F2BD826FDD7AC00B28496 /* PostTweetViewController.swift */,
+				9F5F2BDE2701581100B28496 /* ImageUploader.swift */,
+				9F5F2BE027016B1800B28496 /* ConnectionError.storyboard */,
+				9F5F2BE227016DA000B28496 /* ConnectionErrorViewController.swift */,
 			);
 			path = study_swift;
 			sourceTree = "<group>";
@@ -194,10 +230,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5F2BC726FC568300B28496 /* SignUp.storyboard in Resources */,
 				9FC9C61026DCA9320026ABA9 /* LaunchScreen.storyboard in Resources */,
 				9FA26F5626E74E11004628E0 /* TimeLine.storyboard in Resources */,
+				9F5F2BE127016B1800B28496 /* ConnectionError.storyboard in Resources */,
 				9FC9C60D26DCA9320026ABA9 /* Assets.xcassets in Resources */,
+				9F5F2BCF26FDAEEF00B28496 /* LogIn.storyboard in Resources */,
 				9FC9C60826DCA9300026ABA9 /* Main.storyboard in Resources */,
+				9F5F2BD726FDD18900B28496 /* PostTweet.storyboard in Resources */,
 				9FFEB78226EAE6B400BC56AF /* Tweet.storyboard in Resources */,
 				9FFEB79426EF2D5B00BC56AF /* PhotoLibrary.storyboard in Resources */,
 				9FA26F5226E746E0004628E0 /* TimeLineTableViewCell.xib in Resources */,
@@ -212,8 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5F2BC926FC687800B28496 /* SignUpViewController.swift in Sources */,
+				9F5F2BD926FDD7AC00B28496 /* PostTweetViewController.swift in Sources */,
 				9FA26F5126E746E0004628E0 /* TimeLineTableViewCell.swift in Sources */,
 				9FA26F5C26E89B54004628E0 /* TabBarDelegate.swift in Sources */,
+				9F5F2BCB26FC777500B28496 /* UIColorExtention.swift in Sources */,
+				9F5F2BCD26FD7A9900B28496 /* LogInViewModel.swift in Sources */,
 				9FFEB79826EF473F00BC56AF /* PhotoLibraryViewController.swift in Sources */,
 				9FFEB78826EB204000BC56AF /* TimeLineNavigationViewController.swift in Sources */,
 				9FFEB79626EF46DB00BC56AF /* PhotoLibraryNavigationController.swift in Sources */,
@@ -222,16 +266,20 @@
 				9F5F2BBF26F96CD400B28496 /* UserViewModel.swift in Sources */,
 				9FC9C60526DCA9300026ABA9 /* ViewController.swift in Sources */,
 				9FC9C60B26DCA9300026ABA9 /* study_swift.xcdatamodeld in Sources */,
+				9F5F2BD526FDD0E000B28496 /* TimeLineContanerViewController.swift in Sources */,
 				9F5F2BBB26F9634600B28496 /* User.swift in Sources */,
 				9FC9C60126DCA9300026ABA9 /* AppDelegate.swift in Sources */,
 				9F5F2BC526FAEB9600B28496 /* CommentViewModel.swift in Sources */,
 				9FFEB78A26EB315400BC56AF /* PlaceHolderTextView.swift in Sources */,
 				9F5F2BC126F9AE1D00B28496 /* TweetViewModel.swift in Sources */,
 				9FC9C60326DCA9300026ABA9 /* SceneDelegate.swift in Sources */,
+				9F5F2BDF2701581100B28496 /* ImageUploader.swift in Sources */,
 				9F5F2BC326F9B0C900B28496 /* Comment.swift in Sources */,
 				9FC9C61A26DCDC240026ABA9 /* TabBarController.swift in Sources */,
 				9FC9C62026DDDEAB0026ABA9 /* TweetTableViewCell.swift in Sources */,
 				9FA26F5426E74DF1004628E0 /* TimeLineViewController.swift in Sources */,
+				9F5F2BE327016DA000B28496 /* ConnectionErrorViewController.swift in Sources */,
+				9F5F2BD126FDB6D500B28496 /* LogInViewController.swift in Sources */,
 				9FFEB78D26EB484800BC56AF /* CommentsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

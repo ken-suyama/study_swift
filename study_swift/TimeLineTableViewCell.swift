@@ -13,6 +13,7 @@ class TimeLineTableViewCell: UITableViewCell {
     @IBOutlet weak var userIcon: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var tweetImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +23,14 @@ class TimeLineTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(icon: UIImage, name: String, tweet: String) {
+    func setup(icon: UIImage, name: String, tweet: String, tweetImage: UIImage?) {
         self.userIcon.image = icon
         self.userName.text = name
         self.content.text = tweet
+        self.tweetImage.image = tweetImage
+        if tweetImage == nil {
+            self.tweetImage.isHidden = true
+        }
     }
     
 }

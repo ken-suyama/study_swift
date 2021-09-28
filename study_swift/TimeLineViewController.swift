@@ -12,26 +12,50 @@ class TimeLineViewController: UITableViewController, UITabBarDelegate {
     
     private let viewModel = TweetViewModel()
     private var tweets: [Tweet] = []
-
-    struct User {
-        let icon: UIImage?
-        let name: String
-        let content: String
-    }
+    private let notificationCenter = NotificationCenter.default
 
     @IBOutlet var timeLine: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(self.viewModel.fetchTweet())
+
         self.tweets = self.viewModel.fetchTweet()
 
         timeLine.dataSource = self
         timeLine.delegate = self
         timeLine.register(UINib(nibName: "TimeLineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimeLineTableViewCell")
+        
+        notificationCenter.addObserver(self, selector: #selector(updateList), name: .tweetPosted, object: nil)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
+        self.refreshControl = refreshControl
     }
     
+    @objc func refresh() {
+        tableView.performBatchUpdates({
+            self.tweets = self.viewModel.fetchTweet()
+            self.timeLine.reloadData()
+        }) { (finished) in
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
+    @objc func updateList(notification: Notification) {
+        let content = notification.userInfo!["tweet"] as! String
+        let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+        let userName = UserDefaults.standard.string(forKey: "userName") ?? ""
+        let userIconUrl = UserDefaults.standard.string(forKey: "userIconUrl") != "" ? UserDefaults.standard.string(forKey: "userIconUrl") : nil
+        let userEmail = UserDefaults.standard.string(forKey: "userEmail") ?? ""
+        self.tweets.insert(Tweet.init(10, content, nil, "", "", userId, User.init(userId, userEmail, "", userName, "", userIconUrl, "", ""), []), at: 0)
+        self.timeLine.beginUpdates()
+        self.timeLine.insertRows(at: [IndexPath(row: 0, section: 0)],
+                                  with: .automatic)
+        self.timeLine.endUpdates()
+        timeLine.scrollToRow(at: IndexPath(row: 0, section: 0),
+                             at: UITableView.ScrollPosition.bottom, animated: true)
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tweets.count
     }
@@ -41,7 +65,8 @@ class TimeLineViewController: UITableViewController, UITabBarDelegate {
 
         let tweet = self.tweets[indexPath.row]
         let iconUrl: UIImage = UIImage(url: tweet.user.iconUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
-        cell.setup(icon: iconUrl, name: tweet.user.name, tweet: tweet.content)
+        let tweetImage: UIImage? = tweet.imageUrl != nil ? UIImage(url: tweet.imageUrl!) : nil
+        cell.setup(icon: iconUrl, name: tweet.user.name, tweet: tweet.content, tweetImage: tweetImage)
 
         return cell
     }
@@ -50,8 +75,8 @@ class TimeLineViewController: UITableViewController, UITabBarDelegate {
         self.tweets = viewModel.fetchTweet()
         let tweet = self.tweets[indexPath.row]
         let iconUrl: UIImage = UIImage(url: tweet.user.iconUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
-        let loginUserIconUrl: UIImage = UIImage(url: tweet.user.iconUrl ?? "https://i.gzn.jp/img/2018/01/15/google-gorilla-ban/00.jpg")
-        let viewController = TweetViewController.makeInstance(tweetId: tweet.id, posterImage: iconUrl, posterName: tweet.user.name, tweet: tweet.content, postedAt: tweet.createdAt, userIcon: loginUserIconUrl, comments: tweet.comments)
+        let tweetImage: UIImage? = tweet.imageUrl != nil ? UIImage(url: tweet.imageUrl!) : nil
+        let viewController = TweetViewController.makeInstance(tweetId: tweet.id, posterImage: iconUrl, posterName: tweet.user.name, tweet: tweet.content, tweetImage: tweetImage, postedAt: tweet.createdAt, comments: tweet.comments)
 
         self.navigationController?.pushViewController(viewController, animated: true)
     }
